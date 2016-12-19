@@ -8,7 +8,20 @@
 
 ![housing_price_plot](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_housing_price_plot.PNG?raw=true) **<그림1>**  
 
-수평(x)축은 주택의 사이즈(square feet, 평방피트)를 뜨하고 수직(y)축은 주택 가격($1,000)을 뜻합니다. 이 데이터를 토대로 볼 때, 당신의 친구가 750평방피트의 집을 갖고 있는데 얼마에 팔아야 할지 궁금해 한다고 합시다. 이 때 학습 알고리즘은 어떤 도움을 줄 수 있을까요? 학습 알고리즘이 할 수 있는 한 가지는 데이터를 관통하는 일직선을 만드는 것, 즉 직선을 데이터에 적합(fit)시키는 것입니다. 이러한 직선으로 본다면 친구의 집은 $150,000에 팔릴 것으로 예상됩니다. 
+수평(x)축은 주택의 사이즈(square feet, 평방피트)를 뜨하고 수직(y)축은 주택 가격($1,000)을 뜻합니다. 이 데이터를 토대로 볼 때, 당신의 친구가 750평방피트의 집을 갖고 있는데 얼마에 팔아야 할지 궁금해 한다고 합시다. 이 때 학습 알고리즘은 어떤 도움을 줄 수 있을까요? 학습 알고리즘이 할 수 있는 한 가지는 데이터를 관통하는 일직선을 만드는 것, 즉 직선을 데이터에 적합(fit)시키는 것입니다. 
+
+![housing_price_straightline](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_housing_price_straightline.png?raw=true) **<그림2>**
+
+이러한 직선으로 본다면 친구의 집은 약 $150,000에 팔릴 것으로 예상할 수 있습니다.
+
+더 나은 방법도 가능합니다. 예를 들어, 데이터에 직선을 적합시키기 보다는 이차함수(quadratic function) 또는 2차 다항식 함수(second-order polynomial)를 만드는 게 더 나을 수도 있습니다.
+
+
+
+
+포물선 형태의 이차함수 그래프를 만들어서 예측을 해보면 친구의 집을 약 $200,000에 팔  수 있을 것으로 예측할 수 있습니다. 
+
+
 
 ...작성중...
 
