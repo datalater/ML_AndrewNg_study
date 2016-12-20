@@ -2,6 +2,8 @@
 
 ## 02 Supervised Learning ##
 
+### 1. Lecture note ###
+
 이 강의에서는 가장 일반적인 기계학습 유형인 supervised learning<sup>지도 학습</sup>이 무엇인지 알아보도록 하겠습니다. 공식적인 정의는 뒤에서 이야기하도록 하고 쉽게 설명하기 위해 예를 들어보겠습니다. 
 
 주택 가격을 예측해 보고 싶다고 가정해 봅시다. 몇 년 전 한 학생이 관련 데이터 세트를 오리곤<sup>Oregon</sup>주 포틀랜드<sup>Portland</sup>시 기관에서 가져왔습니다. 그 데이터를 그래프로 나타내면 아래와 같습니다.
@@ -105,7 +107,7 @@ classification problem을 그래프로 나타내는 다른 방법도 있습니�
 지금 이 슬라이드에서는 5가지 특성들을 나열했지만 현장에서는 무한히 많은 특성들을 기계학습 알고리즘에 사용할 수 있습니다. 그러면 무한한 특성들의 데이터를 다뤄야 할 때 저장의 한계가 있을 텐데 컴퓨터 메모리가 부족하게 되진 않을까요? 나중에 Support Vector Machine(SVM) 알고리즘에 대해 이야기할 시간이 있을 텐데, 이 알고리즘은  수학적인 기술을 활용해서 컴퓨터가 무한한 개수의 특성들을 다룰 수 있게 만들어 줍니다. 즉 가능하다는 거죠.
 
  
-### Recap ###
+### 2. Recap ###
 
 Q1. supervised learning이란?  
 A1-1. 기계를 학습시킬 때 문제지와 정답지를 함께 주는 것  
@@ -114,23 +116,43 @@ A1-2. 기계가 과거의 문제지와 정답지를 토대로 새로운 문제�
 Q2. supervised learning 예시?  
 A2. 집값 예측, 종양 판단 예측
 
-Q3. regression problem이란?  
-A3. 연속적인 값(continuous value output)을 예측하는 문제 유형
+Q3. supervised learning 문제 유형?
+A3. regression problems, classification problems
 
-Q4. regression problem 예시?  
-A4. 집값 예측
+Q4. regression problem이란?  
+A4. 연속적인 값(continuous value output)을 예측하는 문제 유형 
 
-Q5. classification problem이란?
-A5. 비연속적인 값(discrete value output)을 예측하는 문제 유형
+Q5. regression problem 예시?  
+A5. 집값 예측
 
-Q6. classification problem 예시?  
-A6. 종양 판단 예측
+Q6. classification problem이란?
+A6. 비연속적인 값(discrete value output)을 예측하는 문제 유형
 
+Q7. classification problem 예시?  
+A7. 종양 판단 예측
 
-----------
+Q8. 다음 문제를 푸시오.
+![wrapup question](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_wrap%20up%20question.png?raw=true)
 
-----------
+A8. 비공개
 
-----------
+### 3. Summary document ###
 
-----------
+**Supervised Learning**  
+
+In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output. 
+
+Supervised learning problems are categorized into "regression" and "classification" problems. In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function. In a classification problem, we are instead trying to predict results in a discrete output. In other words, we are trying to map input variables into discrete categories. 
+
+**Example 1:**
+
+Given data about the size of houses on the real estate market, try to predict their price. Price as a function of size is a continuous output, so this is a regression problem. We could turn this example into a classification problem by instead making our output about whether the house "sells for more or less than the asking price." Here we are classifying the houses based on price into two discrete categories. 
+
+**Example 2:** 
+
+(a) Regression - Given a picture of a person, we have to predict their age on the basis of the given picture 
+
+(b) Classification - Given a patient with a tumor, we have to predict whether the tumor is malignant or benign.
+
+</br></br></br>
+끝.
