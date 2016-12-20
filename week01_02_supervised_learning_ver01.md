@@ -8,7 +8,7 @@
 
 ![housing_price_plot](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_housing_price_plot.PNG?raw=true) **<그림1>**  
 
-수평(x)축은 주택의 사이즈(square feet, 평방피트)를 뜨하고 수직(y)축은 주택 가격($1,000)을 뜻합니다. 
+수평(x)축은 주택의 사이즈(square feet, 평방피트)를 뜻하고 수직(y)축은 주택 가격($1,000)을 뜻합니다. 
 
 
 ----------
@@ -41,8 +41,9 @@
 
 전문용어를 사용하면, 이러한 주택 가격 예측 문제는 regression problem<sup>회귀 문제</sup>라고 부릅니다. 회귀 문제는 주택 가격처럼 연속적인 출력 값(continuous value output)을 예측해야 하는 문제를 뜻합니다. 엄밀히 따지자면 가격은 cent 단위로 반올림할 수 있어서 비연속적인 값(discrete values)이지만 일반적으로 볼 때 우리는 주택 가격을 실수(real number)로서, 값을 가지고 있는 스칼라 값(scalar value)으로서, 연속적인 값을 가진 숫자로 간주합니다. 그리고 **regression이라는 용어는 연속적인 값을 가진 특성을 예측하는 경우를 뜻합니다**.
 
-Here's another supervised learning example, some friends and I were actually working on this earlier. 
+supervised learning의 또 다른 예시를 알아볼까요? 제 친구들 몇 명과 함께 작업했던 내용입니다. 의료 기록을 보면서 유방에 있는 종양이 악성(malignant)인지 양성(benign)인지 예측하고자 합니다. 환자의 가슴에 혹이나 종양이 발견되었을 때, 악성 종양(malignant tumor)은 매우 위험하고 심각한 종양을 뜻하고 양성 종양(benign tumor)은 무해한 종양을 뜻합니다. 그러므로 악성인지 양성인지 판단하는 문제는 굉장히 중요하고 많은 사람들이 관심을 기울이는 문제입니다. 
 
+그럼 주어진 데이터가 이렇게 생겼다고 해봅시다. 수평(x)축에는 종양의 크기를, 수직(y)축에는 0과 1을 표기합니다. 0은 악성종양이 아니다(No), 1은 악성종양이 맞다(Yes)를 뜻합니다.   
 
 ----------
 
