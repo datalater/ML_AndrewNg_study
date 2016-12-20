@@ -55,7 +55,7 @@ supervised learning의 또 다른 예시를 알아볼까요? 제 친구들 몇 �
 
 ----------
 
-자 여기서 문제 들어갑니다. 정말 비극적인 일이지만 가상의 친구가 유방에 종양이 있고 종양의 사이즈가 분홍색 화살표에 위치합니다. 
+자 여기서 문제 들어갑니다. 정말 비극적인 일이지만 가상의 친구가 유방에 종양이 있고 종양의 사이즈가 분홍색 화살표에 위치한다고 합시다. 
 
 ![Breast cancer friend example](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_Breast%20cancer%20friend%20example.png?raw=true)
 **<그림5>**  
