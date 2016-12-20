@@ -43,11 +43,39 @@
 
 supervised learning의 또 다른 예시를 알아볼까요? 제 친구들 몇 명과 함께 작업했던 내용입니다. 의료 기록을 보면서 유방에 있는 종양이 악성(malignant)인지 양성(benign)인지 예측하고자 합니다. 환자의 가슴에 혹이나 종양이 발견되었을 때, 악성 종양(malignant tumor)은 매우 위험하고 심각한 종양을 뜻하고 양성 종양(benign tumor)은 무해한 종양을 뜻합니다. 그러므로 악성인지 양성인지 판단하는 문제는 굉장히 중요하고 많은 사람들이 관심을 기울이는 문제입니다. 
 
-그럼 주어진 데이터가 이렇게 생겼다고 해봅시다. 수평(x)축에는 종양의 크기를, 수직(y)축에는 0과 1을 표기합니다. 0은 악성종양이 아니다(No), 1은 악성종양이 맞다(Yes)를 뜻합니다. 
+----------
+
+그럼 주어진 데이터가 아래 **<그림4>**처럼 생겼다고 해봅시다. 수평(x)축에는 종양의 크기를, 수직(y)축에는 0과 1을 표기합니다. 0은 악성종양이 아니다(No), 1은 악성종양이 맞다(Yes)를 뜻합니다. 
 
 ![Breast cancer plot](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_Breast%20cancer%20plot.png?raw=true) **<그림4>**  
 
-데이터에 양성 종양(파란색)과 악성 종양(빨간색)이 각각 5개씩 있다고 해봅시다. 자 여기서 문제 들어갑니다. 
+데이터에 양성 종양(파란색)과 악성 종양(빨간색)이 각각 5개씩 있습니다. 
+
+----------
+
+자 여기서 문제 들어갑니다. 정말 비극적인 일이지만 가상의 친구가 유방에 종양이 있고 종양의 사이즈가 분홍색 화살표에 위치합니다. 
+
+![Breast cancer friend example](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_Breast%20cancer%20friend%20example.png?raw=true)
+**<그림5>**  
+
+이때 친구의 종양이 악성인지 양성인지 판단하려고 할 때 각각의 확률이 얼마나 될까요? 기계학습 분야에서는 이러한 유형의 문제를 전문용어로 classification problem<sup>분류 문제</sup>이라고 합니다. classification이라는 용어는 이산 출력 값(discrete value output)을 예측해야 하는 문제를 뜻합니다. 이산 출력 값은 '0 또는 1', '악성 또는 양성'과 같이 출력 값이 분류할 수 있는 경우일 때 사용됩니다. 이산(離散)이라는 말은 연속적인(continuous) 값과 달리 출력 값이 비연속적이고 흩어져 있음을 의미합니다. 출력 값은 보통 2가지이나 3가지 이상인 경우도 있습니다. 
+
+예를 들어, 유방암의 종류가 3가지라고 합시다. 그러면 총 4가지 출력 값이 나오게 됩니다.   
+
++ type 1 malignant tumor 
++ type 2 malignant tumor
++ type 3 malignant tumor
++ Not tumor (=benign) 
+
+
+----------
+
+classification problem을 그래프로 나타내는 다른 방법도 있습니다. 이번에는 다른 심볼을 사용해보겠습니다. 아까와 마찬가지로 예측 변수로서 종양의 크기라는 특성(attribute)을 사용해서 악성인지 양성이니 예측하려고 합니다. 
+
+
+동그라미(O) 심볼은 양성을, 엑스자(X) 심볼은 악성을 뜻합니다. 이 **<그림6>**은 위의 **<그림5>**를 일직선으로 맵핑(배치)한 것입니다. 
+
+ 
 
 ----------
 
