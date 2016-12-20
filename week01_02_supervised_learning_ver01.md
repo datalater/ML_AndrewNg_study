@@ -80,8 +80,13 @@ classification problem을 그래프로 나타내는 다른 방법도 있습니�
 
 지금까지는 한 가지 특성(feature, or attribute)만 사용해서 예측하려고 했습니다. 보통 기계학습 문제에서는 한가지 이상의 특성을 사용합니다. 다음 예시로 넘어가 보죠.
 
-종양의 크기만 아는 것이 아니라 환자의 나이도 안다고 해봅시다. 그러면 데이터는 **<그림7>**처럼 보일 것입니다.  
+종양의 크기만 아는 것이 아니라 환자의 나이도 안다고 해봅시다. 그러면 데이터는 **<그림7>**처럼 보일 것입니다. 
 
+![breast cancer two attriubtes](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_Breast%20cancer%20two%20attributes.png?raw=true) **<그림7>**   
+
+파란색 동그라미는 benign tumor를, 빨간색 엑스자는 malignant tumor를 뜻하고 친구의 종양은 분홍색 동그라미에 위치한다고 합시다. 친구의 종양은 benign일까요 malignant일까요?
+
+기계학습 알고리즘이 이러한 문제를 해결하는 방법은, malignant tumor와 benign tumor를 구별하는 일직선을 그래프에 그리는 것입니다. 
  
 
 ----------
