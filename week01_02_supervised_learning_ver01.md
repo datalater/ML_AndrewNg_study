@@ -86,8 +86,46 @@ classification problem을 그래프로 나타내는 다른 방법도 있습니�
 
 파란색 동그라미는 benign tumor를, 빨간색 엑스자는 malignant tumor를 뜻하고 친구의 종양은 분홍색 동그라미에 위치한다고 합시다. 친구의 종양은 benign일까요 malignant일까요?
 
-기계학습 알고리즘이 이러한 문제를 해결하는 방법은, malignant tumor와 benign tumor를 구별하는 일직선을 그래프에 그리는 것입니다. 
+----------
+
+기계학습 알고리즘이 이러한 문제를 해결하는 방법은, malignant tumor와 benign tumor를 구별하는 일직선을 그래프에 그리는 것입니다. **<그림8>**처럼 말이죠.
+
+![Breast cancer ML separate line](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_Breast%20cancer%20machine%20learning%20separate%20line.png?raw=true)
+**<그림8>** 
  
+이 알고리즘에 의하면 친구의 종양은 다행스럽게도 benign tumor일 확률이 높다고 예측됩니다. 지금까지는 2가지 특성까지 사용했지만 실제 현장에서는 아래와 같이 훨씬 더 많은 특성들이 사용됩니다.
+
++ clump thickness<sup>혹의 두께</sup>
++ uniformatiy of cell size<sup>종양 세포 크기의 균일함</sup>
++ uniformatiy of cell shape<sup>종양 세포 모양의 균일함</sup>
++ 등등
+
+----------
+
+지금 이 슬라이드에서는 5가지 특성들을 나열했지만 현장에서는 무한히 많은 특성들을 기계학습 알고리즘에 사용할 수 있습니다. 그러면 무한한 특성들의 데이터를 다뤄야 할 때 저장의 한계가 있을 텐데 컴퓨터 메모리가 부족하게 되진 않을까요? 나중에 Support Vector Machine(SVM) 알고리즘에 대해 이야기할 시간이 있을 텐데, 이 알고리즘은  수학적인 기술을 활용해서 컴퓨터가 무한한 개수의 특성들을 다룰 수 있게 만들어 줍니다. 즉 가능하다는 거죠.
+
+ 
+### Recap ###
+
+Q1. supervised learning이란?  
+A1-1. 기계를 학습시킬 때 문제지와 정답지를 함께 주는 것  
+A1-2. 기계가 과거의 문제지와 정답지를 토대로 새로운 문제의 정답을 예측하는 학습 유형
+
+Q2. supervised learning 예시?  
+A2. 집값 예측, 종양 판단 예측
+
+Q3. regression problem이란?  
+A3. 연속적인 값(continuous value output)을 예측하는 문제 유형
+
+Q4. regression problem 예시?  
+A4. 집값 예측
+
+Q5. classification problem이란?
+A5. 비연속적인 값(discrete value output)을 예측하는 문제 유형
+
+Q6. classification problem 예시?  
+A6. 종양 판단 예측
+
 
 ----------
 
@@ -96,7 +134,3 @@ classification problem을 그래프로 나타내는 다른 방법도 있습니�
 ----------
 
 ----------
-
-...작성중...
-
-가로축은 각각의 주택의 크기를 평방피트 단위로 표시합니다. 세로축은 각각 주택의 가격을 천 달러 단위로 표시합니다. 이 데이터를 바탕으로 친구가 750평방피트의 주택을 소유하고 있고 팔려고 한다면 어느정도의 가격을 받아야 할까.에 대해 학습 알고리즘을 통해 이를 해결할 수 있을까요? 첫째로 학습알고리즘으로 할 수 있는 것은 데이터를 지나는 직선을 긋고 그 직선을 참고하면, 주택가는 150,000달러정도가 될것이라 보일것입니다. 그렇지만, 학습알고리즘은 이 이상의 것을 할 수 있습니다. 예를 들면, 직선을 데이터에 맞추어 긋는 대신, 이차함수나 이차 방정식을 적용할 수 있습니다. 이를 적용하게 되면 예상치는 여기가 되고 아마도 우리는 집을 $200,000정도에 팔 수 있을 것 같군요. 우리가 나중에 다룰것중 하나는 데이터에 직선을 그릴지 이차 곡선을 그릴지, 어떻게 선택하고 결정하느냐 입니다.
