@@ -72,8 +72,15 @@ supervised learning의 또 다른 예시를 알아볼까요? 제 친구들 몇 �
 
 classification problem을 그래프로 나타내는 다른 방법도 있습니다. 이번에는 다른 심볼을 사용해보겠습니다. 아까와 마찬가지로 예측 변수로서 종양의 크기라는 특성(attribute)을 사용해서 악성인지 양성이니 예측하려고 합니다. 
 
+![classification straight plot](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_classification%20straight%20plot.png?raw=true)**<그림6>**  
 
 동그라미(O) 심볼은 양성을, 엑스자(X) 심볼은 악성을 뜻합니다. 이 **<그림6>**은 위의 **<그림5>**를 일직선으로 맵핑(배치)한 것입니다. 
+
+----------
+
+지금까지는 한 가지 특성(feature, or attribute)만 사용해서 예측하려고 했습니다. 보통 기계학습 문제에서는 한가지 이상의 특성을 사용합니다. 다음 예시로 넘어가 보죠.
+
+종양의 크기만 아는 것이 아니라 환자의 나이도 안다고 해봅시다. 그러면 데이터는 **<그림7>**처럼 보일 것입니다.  
 
  
 
