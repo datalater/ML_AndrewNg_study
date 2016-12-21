@@ -22,26 +22,23 @@
 
 ![housing_price_straightline](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_housing_price_straightline.png?raw=true) **<그림2>**  
 
-이러한 직선으로 본다면 친구의 집은 약 $150,000에 팔릴 것으로 예상할 수 있습니다.
-
+이러한 직선으로 본다면 친구의 집은 약 $150,000에 팔릴 것으로 예상되네요!
 
 ----------
 
-
-더 나은 방법도 가능합니다. 예를 들어, 데이터에 직선을 적합시키기 보다는 이차함수(quadratic function) 또는 2차 다항식 함수(second-order polynomial)를 만드는 게 더 나을 수도 있습니다.
+더 나은 방법도 가능합니다. 예를 들어, 데이터에 직선을 적합시키기 보다는 이차함수(quadratic function) 또는 2차 다항식 함수(second-order polynomial)를 적합시키는 게 더 나을 수도 있습니다.
 
 ![housing_price_quadraticfunction](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_housing_price_quadraticfunction.png?raw=true) **<그림3>**  
 
-포물선 형태의 이차함수 그래프를 만들어서 예측을 해보면, 친구의 집을 약 $200,000에 팔 수 있을 것으로 예측할 수 있습니다. 
-
+포물선 형태의 이차함수 그래프로 예측을 해보면, 친구의 집은 약 $200,000에 팔릴 것 같습니다! 
 
 ----------
 
 우리가 나중에 논의할 내용 중 하나는 데이터에 직선을 적합시켜야 하는 경우와 이차함수를 적합시켜야 하는 경우를 구별하는 방법입니다. 여기서 친구의 집을 더 잘 팔리게 해줄 정답이란 건 없습니다. 그러나 각각의 방법들은 학습 알고리즘을 배우는 데 있어서 좋은 예시입니다. 
 
-자, 지금까지 살펴본 예시가 바로 supervised learning<sup>지도 학습</sup> 알고리즘입니다. supervised라는 용어는 데이터에 이미 정답이 주어졌기 때문에 붙은 것입니다. 즉, 학습 알고리즘을 적용하기 전에 데이터 세트에는 이미 x값(주택 사이즈)에 해당하는 정답인 y값(주택 가격)이 주어져 있었습니다. 집 크기가 얼마였을 때 실제로 얼마에 팔렸다라는 정답을 알고 있는 상태이기 때문에 잘못되지 않도록 이미 감독되어(supervised) 있는 학습인  거죠. 그래서 알고리즘은 이미 주어진 (x, y) 쌍을 토대로 위에서 언급한 친구의 집 사이즈와 같은 새로운 x값을 넣어서 주택 가격인 y값을 예측했던 것입니다. 
+자, 지금까지 살펴본 예시가 바로 supervised learning<sup>지도 학습</sup> 알고리즘입니다. supervised라는 용어는 데이터에 이미 정답이 주어졌다는 것을 뜻합니다. 가령, 학습 알고리즘을 적용하기 전에 데이터 세트에 이미 x값(주택 사이즈)에 해당하는 정답 y값(주택 가격)이 주어져 있는 것입니다. 따라서 집 크기가 얼마였을 때 실제로 얼마에 팔렸다라는 정답을 알고 있는 상태이기 때문에 기존 데이터가 이미 감독되어(supervised) 있는 학습인 거죠. 그래서 알고리즘은 이미 주어진 (x, y) 쌍을 토대로 위에서 언급한 친구의 집 사이즈와 같은 새로운 x값을 넣어서 주택 가격 y값을 예측했던 것입니다. 
 
-전문용어를 사용하면, 이러한 주택 가격 예측 문제는 regression problem<sup>회귀 문제</sup>라고 부릅니다. 회귀 문제는 주택 가격처럼 연속적인 출력 값(continuous value output)을 예측해야 하는 문제를 뜻합니다. 엄밀히 따지자면 가격은 cent 단위로 반올림할 수 있어서 비연속적인 값(discrete values)이지만 일반적으로 볼 때 우리는 주택 가격을 실수(real number)로서, 값을 가지고 있는 스칼라 값(scalar value)으로서, 연속적인 값을 가진 숫자로 간주합니다. 그리고 **regression이라는 용어는 연속적인 값을 가진 특성을 예측하는 경우를 뜻합니다**.
+전문용어를 사용하면, 이러한 주택 가격 예측 문제는 regression problem<sup>회귀 문제</sup>라고 부릅니다. 회귀 문제는 주택 가격처럼 연속적인 출력 값(continuous value output)을 예측해야 하는 문제를 뜻합니다. 엄밀히 따지자면 가격은 cent 단위로 반올림할 수 있어서 비연속적인 값(discrete values)이지만 일반적으로 볼 때 우리는 주택 가격을 실수(real number)로서, 값을 가지고 있는 스칼라 값(scalar value)으로서, 연속적인 값을 가진 숫자로 간주합니다. 그리고  중요한 사항이라 반복하건대, **regression이라는 용어는 연속적인 값을 가진 특성을 예측하는 경우를 뜻합니다**.
 
 supervised learning의 또 다른 예시를 알아볼까요? 제 친구들 몇 명과 함께 작업했던 내용입니다. 의료 기록을 보면서 유방에 있는 종양이 악성(malignant)인지 양성(benign)인지 예측하고자 합니다. 환자의 가슴에 혹이나 종양이 발견되었을 때, 악성 종양(malignant tumor)은 매우 위험하고 심각한 종양을 뜻하고 양성 종양(benign tumor)은 무해한 종양을 뜻합니다. 그러므로 악성인지 양성인지 판단하는 문제는 굉장히 중요하고 많은 사람들이 관심을 기울이는 문제입니다. 
 
@@ -125,7 +122,7 @@ A4. 연속적인 값(continuous value output)을 예측하는 문제 유형
 Q5. regression problem 예시?  
 A5. 집값 예측
 
-Q6. classification problem이란?
+Q6. classification problem이란?  
 A6. 비연속적인 값(discrete value output)을 예측하는 문제 유형
 
 Q7. classification problem 예시?  
