@@ -27,6 +27,12 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 #### __clustering algorithm의 예시 ####
 
 클러스터링 알고리즘를 사용한 예시 중 하나가 바로 구글 뉴스입니다.
+
+![unsup.learning_googleNews01](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_googleNews01.png?raw=true) **<그림4>**
+
+**<그림4>**에서 빨간색으로 표시된 기사는 BP사의 기름 유출 사태에 대한 뉴스입니다. 하단의 초록색 글씨들은 같은 주제를 다룬 다른 언론사들의 기사를 연결해주는 링크입니다. 전 세계 뉴스 기사는 굉장히 많을 텐데 같은 주제에 대한 다른 언론사들의 기사를 한 번에 모을 수 있는 방법은 무엇일까요?
+
+구글 뉴스가 한 것은 뉴스 기사 수천 수만 개를 찾고 그것들을 자동으로 클러스터링한 것입니다. 
  
 ### 2. Recap ###
 
