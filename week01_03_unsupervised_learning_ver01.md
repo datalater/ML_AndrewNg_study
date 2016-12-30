@@ -28,16 +28,28 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 #### __clustering algorithm의 예시는? ####
 
+ + Google News
+
 클러스터링 알고리즘를 사용한 예시 중 하나가 바로 구글 뉴스입니다. 지금 바로 [Google News](https://news.google.co.kr/?edchanged=1&ned=us&authuser=0 "Google News 링크")를 클릭해서 확인해보세요.
 
 ![unsup.learning_googleNews01](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_googleNews01.png?raw=true) **<그림4>**
 
 미리 캡쳐해둔 그림을 보겠습니다. **<그림4>**에서 빨간색으로 표시된 기사는 "BP사의 기름 유출 사태"에 대한 뉴스입니다. 하단의 초록색 글씨들은 같은 주제를 다룬 다른 언론사들의 기사를 연결해주는 링크입니다. 전 세계 뉴스 기사는 굉장히 많을 텐데 같은 주제에 대한 다른 언론사들의 기사를 한 번에 모을 수 있는 방법은 무엇일까요?
 
-구글 뉴스가 한 것은 뉴스 기사 수천 수만 개를 찾고 그것들을 자동으로 클러스터링한 것입니다. 같은 주제를 가진 모든 뉴스 기사가 한 번에 전시되는 것이죠. 
+구글 뉴스가 한 것은 뉴스 기사 수천 수만 개를 찾고 그것들을 자동으로 클러스터링한 것입니다. 그렇게 하면 같은 주제를 가진 모든 뉴스 기사가 한 곳에 모이는 거죠. 
 
++ genomics
 
- 
+다음 예시는 genomics<sup>유전체학</sup>입니다.
+
+![unsup.learning_genomics](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_genomics.png?raw=true) **<그림5>**
+
+**<그림5>**는 DNA microarray 데이터입니다. 유전체학은 여러 사람의 DNA 데이터를 모아두고 같은 유전자를 얼마나 가지고 있는지 측정합니다. 엄밀히 말하면, 특정 유전자가 발현되는 정도를 측정하는 것입니다. 위 그림에 나타난 빨간색, 녹색, 회색 등은 다른 사람들이 특정 유전자를 얼마나 갖고 있는지 정도를 나타냅니다. 
+
+이제 여러분이 할 일은 클러스터링 알고리즘을 돌려서 여러 사람을 카테고리로 또는 타입으로 나누는 것입니다.
+
+이런 작업이 unsupervised learning에 속하는 이유는 사전에 어떤 사람은 type1이고 또 다른 사람은 type2에 해당한다는 정보 없이 알고리즘을 돌리기 때문입니다. 그저 많은 데이터가 있음을 알려주기만 합니다.
+
 ### 2. Recap ###
 
 Q1. 
