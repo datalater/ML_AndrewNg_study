@@ -66,7 +66,7 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 + 시장 세분화(market segmentation) > 
 
-
+회사들은 방대한 고객 정보를 갖고 있습니다. 고객 데이터를 보고 자동으로 세분 시장을 발견하고 
 
 ### 2. Recap ###
 
