@@ -24,9 +24,9 @@
 
 ![unsup.learning_red circle clusters](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_red%20circle%20clusters.png?raw=true) **<그림3>**
 
-unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터가 2개 집단으로 구분될 수 있습니다. 이렇게 데이터의 집단을 나누는 알고리즘을 clustering algorithm<sup>클러스터링 알고리즘</sup>이라고 합니다. cluster는 모여 있는 집단을 뜻합니다. 이 알고리즘은 다양한 곳에서 많이 쓰입니다.
+unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터가 2개 집단으로 구분될 수 있습니다. 이렇게 데이터의 집단을 나누는 알고리즘을 clustering algorithm<sup>클러스터링 알고리즘</sup>이라고 합니다. cluster는 모여 있는 집단을 뜻합니다. 이 알고리즘은 unsupervised learning에서 활용되는 알고리즘에 속하는 한 종류로써 다양한 곳에서 많이 쓰입니다.
 
-#### __clustering algorithm을 적용한 예시는? ####
+#### __clustering algorithm을 적용한 예시는? (1/2) ####
 
  + Google News > 같은 주제를 다룬 기사별로 집단을 나누는 클러스터링
 
@@ -50,7 +50,7 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 이런 작업이 unsupervised learning에 속하는 이유는 사전에 어떤 사람은 type1이고 또 다른 사람은 type2에 해당한다는 정보 없이 알고리즘을 돌리기 때문입니다. 그저 많은 데이터가 있음을 알려주기만 합니다.
 
-#### __other examples of applications ####
+#### __clustering algorithym을 적용한 예시는? (2/2) ####
 
 계속해서 unsupervised learning과 클러스터링 알고리즘을 적용한 또 다른 예시들을 알아보겠습니다.
 
@@ -64,9 +64,25 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 다음은 소셜 네트워크 분석입니다. 당신이 이메일을 가장 많이 보낸 친구에 대해서 알고 있거나, 페이스북에 등록된 친구 또는 Google+ circles에 대한 데이터를 갖고 있다면 유대 관계가 끈끈한 친구 집단을 자동으로 알아낼 수 있을까요?  또 서로를 알고 있는 집단이 어디인지 알아낼 수 있을까요?
 
-+ 시장 세분화(market segmentation) > 
++ 시장 세분화(market segmentation) > 유사한 성질별로 시장을 세분화 하는 클러스터링  
 
-회사들은 방대한 고객 정보를 갖고 있습니다. 고객 데이터를 보고 자동으로 세분 시장을 발견하고 
+회사들은 방대한 고객 정보를 갖고 있습니다. 고객 데이터를 보고 자동으로 세분 시장을 발견하고 고객을 다른 시장 부문에 자동으로 그룹화하여 서로 다른 시장 부문을 자동으로 더 효율적으로 판매 또는 마케팅 할 수 있습니까? 이 역시 어떤 세분 시장에 어떤 고객이 속하는지 사전에 알 수 없으므로 unsupervised learning 문제 유형이다.
+
++ 천문 데이터 분석(astronomical data analysis) > 
+
+마지막 예시는 놀랍게도 천문 데이터 분석입니다. 천문학에서 클러스터링 알고리즘은 은하계가 어떻게 생성되었는지 이론적인 근거를 제공해주는 데 사용됩니다. 
+
+지금까지 든 예시들은 모두 unsupervised learning에 속하는 여러 종류 중 한 가지인 클러스터링 알고리즘의 예시입니다. 
+
+#### __칵테일 파티 문제 ####
+
+또 다른 예시 하나를 말씀드리겠습니다. 바로 칵테일 파티 문제<sup>cocktail party problem</sup>입니다. 칵테일 파티 문제는 칵테일 파티 효과<sup>cocktail party effect</sup>와 관련이 있습니다. 이 효과는 파티의 참석자들이 시끄러운 주변 소음이 있는 방에 있어도 상대방과 이야기를 선택적으로 집중하여 잘 받아들이는 현상에서 유래한 말입니다. 즉 주변 환경에 개의치 않고 자신에게 의미 있는 정보만을 선택적으로 받아들이는 선택적 지각<sup>selective perception</sup>을 뜻합니다. 다른 말로 자기 관련 효과<sup>self-referential effect</sup>, 잔치집 효과라고도 합니다.
+
+칵테일 파티에 가본 적 있나요? 방 안에 사람이 가득하고 모두가 여러 자리에 앉아 있으며 다들 이야기를 나누고 있습니다. 사람들의 목소리가 동시에 겹쳐서 들리기 때문에 당신 앞에 있는 사람의 말을 듣는 것도 쉽지가 않습니다. 
+
+자, 여기서 칵테일 파티에 두 사람만이 참석했다고 해봅시다. 소규모 칵테일 파티이고 두 사람은 동시에 이야기를 하고 있습니다. 그리고 방 안에 2개의 마이크로폰을 설치합니다. 2개의 마이크로폰은 두 사람으로부터 각각 다른 거리에 떨어져 있습니다. 마이크로폰과 사람과의 거리가 각각 다르다보니, 마이크로폰은 두 사람의 목소리를 다른 조합으로 녹음하게 됩니다. 
+
+
 
 ### 2. Recap ###
 
