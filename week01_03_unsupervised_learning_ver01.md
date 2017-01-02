@@ -85,7 +85,7 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 자, 여기서 칵테일 파티에 두 사람만이 참석했다고 해봅시다. 소규모 칵테일 파티이고 두 사람은 동시에 이야기를 하고 있습니다. 그리고 방 안에 2개의 마이크로폰을 설치합니다. 
 
-![usup.learning_cocktailparty](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_cocktailparty.png?raw=true)
+![usup.learning_cocktailparty](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_cocktailparty.png?raw=true) **<그림7>**
 
 2개의 마이크로폰은 두 사람으로부터 각각 다른 거리에 떨어져 있습니다. 마이크로폰과 사람과의 거리가 각각 다르다보니, 마이크로폰은 두 사람의 목소리를 다른 조합으로 녹음하게 됩니다. 대화자#1은 마이크로폰#1에 더 크게 들리고 대화자#2는 마이크로폰#2에 더 크게 들립니다. 대화자와 마이크로폰 사이의 상대적 거리가 각각 다르기 때문이죠. 하지만 모든 마이크로폰은 두 대화자의 목소리가 겹쳐서 녹음이 됩니다.
 
@@ -93,7 +93,7 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 실제 녹음본을 들려드리겠습니다. 
 
-![unsup.learning_cocktailparty_actual_recording](https://raw.githubusercontent.com/datalater/ML_AndrewNg_study/bae61cd3ed1c2f1fc1793ec4b407c05a2a0e9824/images/UnsupervisedLearning_cocktailparty_actual_recording.png)
+![unsup.learning_cocktailparty_actual_recording](https://raw.githubusercontent.com/datalater/ML_AndrewNg_study/bae61cd3ed1c2f1fc1793ec4b407c05a2a0e9824/images/UnsupervisedLearning_cocktailparty_actual_recording.png) **<그림8>**
 
 + 마이크로폰#1  
 One (uno), two (dos), three (tres), four (cuatro), five (cinco), six (seis), seven (siete), eight (ocho), nine (nueve), ten (y diez).
@@ -122,7 +122,7 @@ Uno, dos, tres, quatro, cinco, seis, siete, ocho, nueve y diez.
 출력#2는 스페인어 목소리만 따로 분리했습니다.
 
 
-#### __칵테일 파티 문제 (3) 배경 음악과 사람 목소리 분리하기 ####
+#### __칵테일 파티 문제 (4) 배경 음악과 사람 목소리 분리하기 ####
 
 이번에는 다른 상황입니다. 라디오 목소리와 영어 카운팅이 혼합되어 있습니다.
 
@@ -148,11 +148,37 @@ Radio BGM
 
 출력#2에서는 사람의 목소리가 거의 또는 아예 들리지 않습니다. 오직 Radio BGM 소리만 들립니다. 
 
+#### __ 프로그래밍 환경의 중요성과 Octave ####
+
 이렇게 오디오 프로세싱 알고리즘을 만들려면 수없이 많은 코드 줄을 써야 하거나 이와 관련된 JAVA 라이브러리를 활용해서 매우 복잡한 프로그램을 만들어야만 가능할지도 모릅니다.
 
 그런데 이 알고리즘은 한 줄의 코드로 작성할 수 있습니다.
 
-  
+![one_line_code](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_cocktail_party_algorithm_one_line_code.png?raw=true) **<그림9>**  
+
+사실 이 한 줄의 코드를 짜기 위해 연구자들은 긴 세월을 보내야 했습니다. 쉬운 문제라고 얘기하려는 것이 아닙니다. 올바른 프로그래밍 환경을 사용한다면 많은 학습 알고리즘들이 정말로 짧은 코드의 프로그램이 될 수 있다는 것을 말하려는 것입니다. 그리고 이는 우리 수업에서 Octave 프로그램을 활용하려는 이유이기도 합니다.
+
+Octave는 무료 오픈 소스 소프트웨어이며 Octave나 Matlab 같은 도구를 사용하면 많은 학습 알고리즘이 단 몇 줄만으로도 실행할 수 있게 됩니다. 추후 수업에서 Octave를 사용하는 법을 배울 것이고 몇 가지 알고리즘들을 Octave에서 직접 실행해볼 것입니다. 또는 Matlab을 사용해볼 수도 있습니다.
+
+실제로 실리콘 밸리에서 많은 기계 학습 알고리즘을 사용할 때 처음에 Octave를 사용해서 프로토타입을 만듭니다. Octave에 있는 소프트웨어는 학습 알고리즘을 믿을 수 없을 정도로 빠르게 실행할 수 있도록 도와주기 때문입니다.
+
+**<그림9>**에 보면 SVD 함수가 있습니다. SVD 함수는 singular value decomposition의 약자로서 linear algebra routine<sup>선형 대수를 활용하는 프로그램 루틴</sup>인데 Octave에 이미 내장되어 있습니다.
+
+이런 것들을 C++이나 Jave로 하려면 코드 줄이 많아져야 하고 그 코드들은 C++이나 Java의 복잡한 라이브러리와 연관되어 있을 것입니다. 물론 C++이나 Java, 또는 Python으로도 기계 학습 알고리즘들을 실행할 수 있지만 Octave보다는 훨씬 더 복잡한 과정을 거쳐야만 할 것입니다.
+
+제가 거의 10년 간 기계 학습을 가르치면서 느낀 점은 Octave를 프로그래밍 환경으로 사용하는 학생이 훨씬 더 빠르게 배운다는 점입니다. Octave를 학습 도구와 프로토타이핑 도구로 사용하면 자연스럽게 학습 알고리즘을 프로토타입으로 만드는 방법을 훨 씬 더 빠르게 배우게 될 것입니다.
+
+실제로 실리콘 밸리의 큰 회사에서 일하는 사람들은 Octave를 활용해서 학습 알고리즘에 대한 첫 프로토타입을 만들고, 프로토타입이 제대로 작동한 후에야 C++이나 JAVA 또는 다른 무언가에 마이그레이트(migrate, 프로그램을 다른 시스템으로 바꾸는 것)시킵니다. Octave에서 프로토타입을 만들고 나서 C++이나 다른 언어로 마이그레이트 시키는 방법은 아예 처음부터 C++로 시작하는 방법보다 훨씬 더 빠르게 학습 알고리즘을 작동시키는 길입니다. 
+
+교육자로서 말씀드립니다. 프로토타입을 만들 때 Octave를 활용하는 것이 다른 언어보다 훨씬 더 생산성이 높습니다. 제 말을 믿으셔도 좋습니다.
+
+#### review question ####
+
+복습 문제를 내드리겠습니다. 이번 시간에는 unsupervised learning에 대해서 배웠습니다. unsupervised learning은 알고리즘에게 방대한 데이터를 주고 데이터에 내재되어 있는 구조를 발견하라고 묻는 학습 환경(learning setting)입니다. 
+
+다음 질문에 답해주십시오.
+
+
 
 ### 2. Recap ###
 
