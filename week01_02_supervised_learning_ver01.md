@@ -106,29 +106,29 @@ classification problem을 그래프로 나타내는 다른 방법도 있습니�
  
 ### 2. Recap ###
 
-Q1. supervised learning이란?  
-A1-1. 기계를 학습시킬 때 문제지와 정답지를 함께 주는 것  
+**Q1. supervised learning이란?**  
+A1-1. 기계를 학습시킬 때 문제지와 정답지를 함께 주는 학습 환경  
 A1-2. 기계가 과거의 문제지와 정답지를 토대로 새로운 문제의 정답을 예측하는 학습 유형
 
-Q2. supervised learning 예시?  
+**Q2. supervised learning 예시?**  
 A2. 집값 예측, 종양 판단 예측
 
-Q3. supervised learning 문제 유형?
+**Q3. supervised learning 문제 유형?**
 A3. regression problems, classification problems
 
-Q4. regression problem이란?  
+**Q4. regression problem이란?**  
 A4. 연속적인 값(continuous value output)을 예측하는 문제 유형 
 
-Q5. regression problem 예시?  
+**Q5. regression problem 예시?**  
 A5. 집값 예측
 
-Q6. classification problem이란?  
+**Q6. classification problem이란?**  
 A6. 비연속적인 값(discrete value output)을 예측하는 문제 유형
 
-Q7. classification problem 예시?  
+**Q7. classification problem 예시?**  
 A7. 종양 판단 예측
 
-Q8. 다음 문제를 푸시오.
+**Q8. 다음 문제를 푸시오.**
 ![wrapup question](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/SupervisedLearning_wrap%20up%20question.png?raw=true)
 
 A8. 비공개
