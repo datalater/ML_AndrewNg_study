@@ -74,7 +74,7 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 지금까지 든 예시들은 모두 unsupervised learning에 속하는 여러 종류 중 한 가지인 클러스터링 알고리즘의 예시입니다. 
 
-#### __칵테일 파티 문제 ####
+#### __칵테일 파티 문제 (1) 개요 ####
 
 또 다른 예시 하나를 말씀드리겠습니다. 바로 칵테일 파티 문제<sup>cocktail party problem</sup>입니다. 
 
@@ -87,13 +87,72 @@ unsupervised learning 알고리즘을 돌리면 **<그림3>**처럼  데이터�
 
 ![usup.learning_cocktailparty](https://github.com/datalater/ML_AndrewNg_study/blob/master/images/UnsupervisedLearning_cocktailparty.png?raw=true)
 
-2개의 마이크로폰은 두 사람으로부터 각각 다른 거리에 떨어져 있습니다. 마이크로폰과 사람과의 거리가 각각 다르다보니, 마이크로폰은 두 사람의 목소리를 다른 조합으로 녹음하게 됩니다. 대화자 1은 마이크로폰 1에 더 크게 들리고 대화자 2는 마이크로폰 2에 더 크게 들립니다. 대화자와 마이크로폰 사이의 상대적 거리가 각각 다르기 때문이죠. 하지만 모든 마이크로폰은 두 대화자의 목소리가 겹쳐서 녹음이 됩니다.
+2개의 마이크로폰은 두 사람으로부터 각각 다른 거리에 떨어져 있습니다. 마이크로폰과 사람과의 거리가 각각 다르다보니, 마이크로폰은 두 사람의 목소리를 다른 조합으로 녹음하게 됩니다. 대화자#1은 마이크로폰#1에 더 크게 들리고 대화자#2는 마이크로폰#2에 더 크게 들립니다. 대화자와 마이크로폰 사이의 상대적 거리가 각각 다르기 때문이죠. 하지만 모든 마이크로폰은 두 대화자의 목소리가 겹쳐서 녹음이 됩니다.
+
+#### __칵테일 파티 문제 (2) 2가지 레코딩 파일 ####
 
 실제 녹음본을 들려드리겠습니다. 
 
+![unsup.learning_cocktailparty_actual_recording](https://raw.githubusercontent.com/datalater/ML_AndrewNg_study/bae61cd3ed1c2f1fc1793ec4b407c05a2a0e9824/images/UnsupervisedLearning_cocktailparty_actual_recording.png)
+
++ 마이크로폰#1  
+One (uno), two (dos), three (tres), four (cuatro), five (cinco), six (seis), seven (siete), eight (ocho), nine (nueve), ten (y diez).
+
+두 사람이 1부터 10까지 숫자를 세는 데 각자 다른 언어로 말하는 것입니다. 마이크로폰#1은 영어 카운팅이 스페인어 카운팅보다 더 크게 들렸습니다.
+
++ 마이크로폰#2  
+Uno (one), dos (two), tres (three), cuatro (four), cinco (five), seis (six), siete (seven), ocho (eight), nueve (nine) y diez (ten)
+
+마이크로폰#2는 스페인어 카운팅이 영어 카운팅보다 더 크게 들렸습니다. 
+
+#### __칵테일 파티 문제 (3) unsupervised learning 알고리즘 활용과 출력 ####
+
+여기서 우리는 위 2가지 마이크로폰 레코더를 가져온 후 unsupervised learning 알고리즘 중 하나인 칵테일 파티 알고리즘<sup>cocktail party algorithm</sup>을 돌려서 데이터의 구조를 파악할 수 있습니다. 
+
+알고리즘이 수행할 작업은 오디오 레코딩을 듣고 "두 오디오 레코딩이 함께 추가된 것 같다" 또는 "두 오디오 레코딩이 함께 합쳐져서 우리가 가진 레코딩을 생성한 것 같다"고 말하는 것입니다. 그리고 알고리즘은 추가되거나 합쳐져서 다른 레코딩을 형성하는 두 개의 오디오 소스를 분리하는 작업을 할 수 있습니다. 실제로 작업을 수행한 칵테일 파티 알고리즘의 첫 번째 출력입니다.
+
++ 출력#1  
+One, two, three, four, five, six, seven, eight, nine, ten.
+
+출력#1은 레코딩에서 영어 목소리만 분리해냈습니다.
+
++ 출력#2  
+Uno, dos, tres, quatro, cinco, seis, siete, ocho, nueve y diez.
+
+출력#2는 스페인어 목소리만 따로 분리했습니다.
 
 
+#### __칵테일 파티 문제 (3) 배경 음악과 사람 목소리 분리하기 ####
 
+이번에는 다른 상황입니다. 라디오 목소리와 영어 카운팅이 혼합되어 있습니다.
+
++ 마이크로폰#1  
+(Radio BGM) One, two, three, four, five, six, seven, eight, nine, ten.
+
+마이크로폰#1은 Radio에서 음악 소리가 흘러나오고 있고 한 사람이 영어로 1부터 10까지 카운팅하고 있는데, 카운팅 목소리가 크게 들립니다.
+
++ 마이크로폰#2  
+Radio BGM (One, two, three, four, five, six, seven, eight, nine, ten)
+
+마이크로폰#2는 카운팅 목소리가 작고 Radio 음악 소리가 더 크게 들립니다.
+
+두 녹음파일을 가지고 칵테일 파티 알고리즘을 돌리면, 알고리즘은 두 오디오 레코딩이 함께 합쳐져 있음을 인지하고 분리해낼 수 있습니다.
+
++ 출력#1  
+One, two, three, four, five, six, seven, eight, nine, ten.
+
+출력#1에서는 사람 목소리가 크게 들리고 Radio BGM의 소리는 매우 작아졌습니다.
+
++ 출력#2  
+Radio BGM
+
+출력#2에서는 사람의 목소리가 거의 또는 아예 들리지 않습니다. 오직 Radio BGM 소리만 들립니다. 
+
+이렇게 오디오 프로세싱 알고리즘을 만들려면 수없이 많은 코드 줄을 써야 하거나 이와 관련된 JAVA 라이브러리를 활용해서 매우 복잡한 프로그램을 만들어야만 가능할지도 모릅니다.
+
+그런데 이 알고리즘은 한 줄의 코드로 작성할 수 있습니다.
+
+  
 
 ### 2. Recap ###
 
